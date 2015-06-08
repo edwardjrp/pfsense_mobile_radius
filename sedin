@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -i.back 's/}/ '$1'}/' /etc/frules && pfctl -a \
+userrules/blackrules -F rules ; pfctl -a userrules/blackrules -f /etc/frules
